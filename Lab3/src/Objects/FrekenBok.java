@@ -62,7 +62,7 @@ public class FrekenBok extends Person {
         Pen pen = new Pen("pen", 20);
         return name + " is writing with a " + paper.color + " " + paper.name + " and " + pen.name;
     }
-    public String sweepUp(Place place, Person p, int fragility) {
+    public String sweepUp(Place place, Person p, int fragility) throws DieException{
         class FloorBrush {
             static String name;
             public FloorBrush(String name) {
@@ -91,7 +91,10 @@ public class FrekenBok extends Person {
             this.force -= 20;
             p.setStat(Status.FUNNY);
             return name + ": Stop laughing! Everybody in your familly is ill, but u don't care!";
-        } else{
+        } if (force < 5){
+            throw new DieException("Freken bok dies");
+        }
+        else{
             return "Freken Bok trew away the " + floorBrush.name;
         }
     }
