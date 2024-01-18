@@ -3,8 +3,8 @@ import Interfaces.Infective;
 import Objects.*;
 import Place.*;
 import java.util.Queue;
-/*вложенные статические-Parket, Window, Cornice, Bed, Room
-внутренние - Harmonica
+/*внутренние-Parket, Window, Cornice, Bed, Room
+вложенные нестатические - Harmonica
 анонимные - Bosse, Betan
 локальные - Pen, Paper, FloorBrush
 */
