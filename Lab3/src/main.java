@@ -11,14 +11,14 @@ import java.util.Queue;
 public class main {
 
     public static void main(String args[]) throws IllegalArgumentException{
-        Home.Window window = new Home.Window(0, 10, "window");
-        Home.Cornice corn = new Home.Cornice(20, 5, "cornice");
+        Home.Window window = new Home.Window(0, 10, "window", Status.OPEN);
+        Home.Cornice corn = new Home.Cornice(20, 5, "cornice", 3);
         Home.Bed bed = new Home.Bed(3, 0, "bed", "under bed");
-        Home.Room room = new Home.Room(0, 10, "room");
+        Home.Room room = new Home.Room(0, 10, "room", 20);
         Game game = new Game("game", Status.GHOST);
         Game.Harmonika harmonika= game.new Harmonika("lip accordion", Status.NORMAL, 13);
         Home home = new Home(0, 0, "home");
-        Home.Parket parket = new Home.Parket(5, 0, "parket");
+        Home.Parket parket = new Home.Parket(5, 0, "parket", 15);
         Build build = new Build();
         Karlson karlson = new Karlson("Karlson", Status.NORMAL, 100, 65, 60, window);
         Boy boy = new Boy("Boy", Status.NORMAL, 5, 36, 10, home);
