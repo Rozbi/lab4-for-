@@ -38,14 +38,16 @@ public class Game {
             }
         }
     }
-
     @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Game game = (Game) o;
+        return Objects.equals(name, game.name) && stat == game.stat;
     }
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        return Objects.hash(name, stat);
     }
 }
