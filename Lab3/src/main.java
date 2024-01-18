@@ -10,7 +10,7 @@ import java.util.Queue;
 */
 public class main {
 
-    public static void main(String args[]) throws IllegalArgumentException{
+    public static void main(String args[]) throws IllegalArgumentException, FrekenBok.DieException{
         Home.Window window = new Home.Window(0, 10, "window", Status.OPEN);
         Home.Cornice corn = new Home.Cornice(20, 5, "cornice", 3);
         Home.Bed bed = new Home.Bed(3, 0, "bed", "under bed");
