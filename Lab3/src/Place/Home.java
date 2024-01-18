@@ -7,13 +7,17 @@ public class Home extends Place {
         super(coordinateХ, coordinateY, name);
     }
     public static class Cornice extends Place{
-    public Cornice(int coordinateХ, int coordinateY, String name){
+        int fragility;
+    public Cornice(int coordinateХ, int coordinateY, String name, int fragility){
         super(coordinateХ, coordinateY, name);
+        this. fragility = fragility;
     }
     }
     public static class Room extends Place{
-        public Room(int coordinateХ, int coordinateY, String name) {
+        int size;
+        public Room(int coordinateХ, int coordinateY, String name, int size) {
             super(coordinateХ, coordinateY, name);
+            this.size = size;
         }
     }
     public static class Bed extends Place{
@@ -27,14 +31,17 @@ public class Home extends Place {
         }
     }
     public static class Parket extends Place {
-
-        public Parket(int coordinateХ, int CoordinateY, String name) {
+        int purity;
+        public Parket(int coordinateХ, int CoordinateY, String name, int purity) {
             super(coordinateХ, CoordinateY, name);
+            this.size = size;
         }
     }
     public static class Window extends Place {
-            public Window(int coordinateХ, int coordinateY, String name) {
+            Status stat;
+            public Window(int coordinateХ, int coordinateY, String name, Status stat;) {
                 super(coordinateХ, coordinateY, name);
+                this.stat = stat;
             }
         }
         @Override
